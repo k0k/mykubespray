@@ -1,0 +1,9 @@
+---
+- hosts: k8s-master1,k8s-master2,k8s-master3
+  tasks:
+    - name: Reiniciando nodos...
+      shell:
+        cmd: "{{ item }}"
+      with_items:
+        - reboot
+...
