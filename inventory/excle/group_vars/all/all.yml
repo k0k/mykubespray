@@ -11,10 +11,10 @@ bin_dir: /usr/bin
 
 
 ## External LB example config
-apiserver_loadbalancer_domain_name: "k8s-api.ve.ex-cle.local"
-loadbalancer_apiserver:
-  address: 10.31.101.4
-  port: 6443
+# apiserver_loadbalancer_domain_name: "k8s-api.ve.ex-cle.local"
+# loadbalancer_apiserver:
+#  address: 10.31.101.4
+#  port: 6443
 
 ## Internal loadbalancers for apiservers
 loadbalancer_apiserver_localhost: true
@@ -38,7 +38,7 @@ loadbalancer_apiserver_healthcheck_port: 8081
 ## Upstream dns servers
 upstream_dns_servers:
    - 10.31.3.3
-   - 8.8.4.4
+#   - 8.8.4.4
 
 ## There are some changes specific to the cloud providers
 ## for instance we need to encapsulate packets with some network plugins
@@ -100,8 +100,8 @@ kube_read_only_port: 10255
 ## Red Hat Enterprise Linux subscription registration
 ## Add either RHEL subscription Username/Password or Organization ID/Activation Key combination
 ## Update RHEL subscription purpose usage, role and SLA if necessary
-rh_subscription_username: "exclerh"
-rh_subscription_password: "C_0ns3j0_2017"
+# rh_subscription_username: "exclerh"
+# rh_subscription_password: "C_0ns3j0_2017"
 # rh_subscription_org_id: ""
 # rh_subscription_activation_key: ""
 # rh_subscription_usage: "Development"
@@ -109,7 +109,7 @@ rh_subscription_password: "C_0ns3j0_2017"
 # rh_subscription_sla: "Self-Support"
 
 ## Check if access_ip responds to ping. Set false if your firewall blocks ICMP.
-ping_access_ip: true
+ping_access_ip: false
 
 # sysctl_file_path to add sysctl conf to
 # sysctl_file_path: "/etc/sysctl.d/99-sysctl.conf"

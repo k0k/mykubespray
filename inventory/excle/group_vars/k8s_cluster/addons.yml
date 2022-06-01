@@ -4,16 +4,16 @@
 dashboard_enabled: false
 
 # Helm deployment
-helm_enabled: true
+helm_enabled: false
 
 # Registry deployment
-registry_enabled: true
+registry_enabled: false
 registry_namespace: kube-system
 # registry_storage_class: ""
 # registry_disk_size: "10Gi"
 
 # Metrics Server deployment
-metrics_server_enabled: true
+metrics_server_enabled: false
 metrics_server_container_port: 4443
 metrics_server_kubelet_insecure_tls: true
 metrics_server_metric_resolution: 15s
@@ -32,7 +32,7 @@ local_path_provisioner_enabled: false
 # local_path_provisioner_helper_image_tag: "latest"
 
 # Local volume provisioner deployment
-local_volume_provisioner_enabled: true
+local_volume_provisioner_enabled: false
 local_volume_provisioner_namespace: kube-system
 local_volume_provisioner_nodelabels:
    - kubernetes.io/hostname
@@ -43,7 +43,7 @@ local_volume_provisioner_storage_classes:
      host_dir: /local-storage
      mount_dir: /local-storage
      volume_mode: Filesystem
-     fs_type: ext4
+     fs_type: xfs
        #   fast-disks:
        #     host_dir: /mnt/fast-disks
        #     mount_dir: /mnt/fast-disks
@@ -92,8 +92,8 @@ rbd_provisioner_enabled: false
 # rbd_provisioner_reclaim_policy: Delete
 
 # Nginx ingress controller deployment
-ingress_nginx_enabled: true
-ingress_nginx_host_network: true
+ingress_nginx_enabled: false
+ingress_nginx_host_network: false
 # ingress_publish_status_address: ""
 # ingress_nginx_nodeselector:
 #   kubernetes.io/os: "linux"
@@ -157,8 +157,8 @@ cert_manager_nodeselector:
 # cert_manager_leader_election_namespace: kube-system
 
 # MetalLB deployment
-metallb_enabled: true
-metallb_speaker_enabled: true
+metallb_enabled: false
+metallb_speaker_enabled: false
 metallb_ip_range:
   - "10.31.101.7-10.31.101.19"
 # metallb_pool_name: "loadbalanced"
@@ -218,5 +218,5 @@ argocd_enabled: false
 # argocd_admin_password: "password"
 
 # The plugin manager for kubectl
-krew_enabled: true
+krew_enabled: false
 krew_root_dir: "/usr/bin/krew"

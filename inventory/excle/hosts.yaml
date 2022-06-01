@@ -31,13 +31,13 @@ all:
   children:
     kube_control_plane:
       hosts:
-        k8s-master1:
         k8s-master2:
+        k8s-master1:
         k8s-master3:
     kube_node:
       hosts:
-        k8s-master1:
         k8s-master2:
+        k8s-master1:
         k8s-master3:
         k8s-worker1:
         k8s-worker2:
