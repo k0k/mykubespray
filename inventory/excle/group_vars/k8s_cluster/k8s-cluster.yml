@@ -64,7 +64,7 @@ credentials_dir: "{{ inventory_dir }}/credentials"
 
 # Choose network plugin (cilium, calico, weave or flannel. Use cni for generic cni plugin)
 # Can also be set to 'cloud', which lets the cloud provider setup appropriate routing
-kube_network_plugin: flannel
+kube_network_plugin: kube-ovn
 
 # Setting multi_networking to true will install Multus: https://github.com/intel/multus-cni
 kube_network_plugin_multus: false
@@ -180,14 +180,14 @@ nodelocaldns_external_zones:
    nameservers:
    - 10.31.3.3
 #   - 2.2.2.2
-   cache: 0
+   cache: 5
 # - zones:
 #   - https://mycompany.local:4453
 #   nameservers:
 #   - 192.168.0.53
 #   cache: 0
 # Enable k8s_external plugin for CoreDNS
-enable_coredns_k8s_external: false
+enable_coredns_k8s_external: true
 coredns_k8s_external_zone: k8s_external.local
 # Enable endpoint_pod_names option for kubernetes plugin
 enable_coredns_k8s_endpoint_pod_names: false
@@ -249,7 +249,7 @@ podsecuritypolicy_enabled: false
 # kubelet_enforce_node_allocatable: pods
 
 ## Optionally reserve resources for OS system daemons.
-system_reserved: false
+system_reserved: true
 ## Uncomment to override default values
 system_memory_reserved: 1Gi
 # system_memory_reserved: 512Mi

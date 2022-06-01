@@ -18,7 +18,8 @@ sudo pip3 install -r requirements.txt
 # Without --become the playbook will fail to run!
 
 # Deploy
-ansible-playbook -i inventory/excle/hosts.yaml  --become --become-user=root -vv --flush-cache cluster.yml
+ansible-playbook -i inventory/excle/hosts.yaml  --become --become-user=root -vvv cluster.yml
 # Adding new nodes to Kubespray 
 # ansible-playbook -i inventory/excle/hosts.yaml  --become --become-user=root cluster.yml -l k8s-worker3
 # sudo ansible-playbook -i inventory/excle/hosts.yaml   -vv --flush-cache --become --become-user=root cluster.yml -l k8s-worker3
+# ansible-playbook -i inventory/excle/hosts.yaml --become cluster.yml -vv --flush-cache --tags calico

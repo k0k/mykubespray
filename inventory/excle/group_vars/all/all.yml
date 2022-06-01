@@ -11,10 +11,10 @@ bin_dir: /usr/bin
 
 
 ## External LB example config
-# apiserver_loadbalancer_domain_name: "k8s-api.ve.ex-cle.local"
-# loadbalancer_apiserver:
-#  address: 10.31.101.4
-#  port: 6443
+apiserver_loadbalancer_domain_name: "k8s-api.ve.ex-cle.local"
+loadbalancer_apiserver:
+  address: 10.31.101.4
+  port: 6443
 
 ## Internal loadbalancers for apiservers
 loadbalancer_apiserver_localhost: true
