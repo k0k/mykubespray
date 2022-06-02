@@ -1,10 +1,10 @@
 ---
 # Kubernetes dashboard
 # RBAC required. see docs/getting-started.md for access details.
-dashboard_enabled: false
+dashboard_enabled: true
 
 # Helm deployment
-helm_enabled: false
+helm_enabled: true
 
 # Registry deployment
 registry_enabled: true
@@ -218,5 +218,5 @@ argocd_enabled: true
 # argocd_admin_password: "password"
 
 # The plugin manager for kubectl
-krew_enabled: false
+krew_enabled: true
 krew_root_dir: "/usr/bin/krew"
