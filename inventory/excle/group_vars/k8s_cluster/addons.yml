@@ -7,13 +7,13 @@ dashboard_enabled: false
 helm_enabled: false
 
 # Registry deployment
-registry_enabled: false
+registry_enabled: true
 registry_namespace: kube-system
 # registry_storage_class: ""
 # registry_disk_size: "10Gi"
 
 # Metrics Server deployment
-metrics_server_enabled: false
+metrics_server_enabled: true
 metrics_server_container_port: 4443
 metrics_server_kubelet_insecure_tls: true
 metrics_server_metric_resolution: 15s
@@ -92,8 +92,8 @@ rbd_provisioner_enabled: false
 # rbd_provisioner_reclaim_policy: Delete
 
 # Nginx ingress controller deployment
-ingress_nginx_enabled: false
-ingress_nginx_host_network: false
+ingress_nginx_enabled: true
+ingress_nginx_host_network: true
 # ingress_publish_status_address: ""
 # ingress_nginx_nodeselector:
 #   kubernetes.io/os: "linux"
@@ -157,8 +157,8 @@ cert_manager_nodeselector:
 # cert_manager_leader_election_namespace: kube-system
 
 # MetalLB deployment
-metallb_enabled: false
-metallb_speaker_enabled: false
+metallb_enabled: true
+metallb_speaker_enabled: true
 metallb_ip_range:
   - "10.31.101.7-10.31.101.19"
 # metallb_pool_name: "loadbalanced"
@@ -205,7 +205,7 @@ metallb_ip_range:
 #     my_asn: 4200000000
 
 
-argocd_enabled: false
+argocd_enabled: true
 # argocd_version: v2.1.6
 # argocd_namespace: argocd
 # Default password:
