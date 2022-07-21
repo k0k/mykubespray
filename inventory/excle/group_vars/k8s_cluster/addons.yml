@@ -1,7 +1,7 @@
 ---
 # Kubernetes dashboard
 # RBAC required. see docs/getting-started.md for access details.
-dashboard_enabled: false
+dashboard_enabled: true
 
 # Helm deployment
 helm_enabled: true
@@ -32,7 +32,7 @@ local_path_provisioner_enabled: false
 # local_path_provisioner_helper_image_tag: "latest"
 
 # Local volume provisioner deployment
-local_volume_provisioner_enabled: true
+local_volume_provisioner_enabled: false
 local_volume_provisioner_namespace: kube-system
 local_volume_provisioner_nodelabels:
    - kubernetes.io/hostname
@@ -43,7 +43,7 @@ local_volume_provisioner_storage_classes:
      host_dir: /local-storage
      mount_dir: /local-storage
      volume_mode: Filesystem
-     fs_type: ext4
+     fs_type: xfs
        #   fast-disks:
        #     host_dir: /mnt/fast-disks
        #     mount_dir: /mnt/fast-disks
@@ -205,7 +205,7 @@ metallb_ip_range:
 #     my_asn: 4200000000
 
 
-argocd_enabled: false
+argocd_enabled: true
 # argocd_version: v2.1.6
 # argocd_namespace: argocd
 # Default password:
